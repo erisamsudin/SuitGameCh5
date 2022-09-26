@@ -11,7 +11,7 @@ interface PlayGame {
 }
 
 open class GetGameCase : GameInterface {
-    var playerOne =  0
+    var playerOne = 0
     var playerTwo = 0
     var p1 = 0
     var resultGame = ""
@@ -19,14 +19,14 @@ open class GetGameCase : GameInterface {
     override fun gameOn(dataInput: Int) {
         playerOne = dataInput
         p1 = playerOne + 1
-        playerTwo = (0 until 2).random()
+        playerTwo = (0..2).random()
     }
 
     override fun checkLogic(context: Context): String {
         if ((p1 % 3) === playerTwo) {
             resultGame = "COM Win"
         } else if (playerOne == playerTwo) {
-            resultGame =  "DRAW"
+            resultGame = "DRAW"
         } else {
             resultGame = "Player Win"
         }
