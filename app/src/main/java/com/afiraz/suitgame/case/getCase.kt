@@ -1,6 +1,7 @@
 package com.afiraz.suitgame.case
 
 import android.content.Context
+import android.util.Log
 
 interface GameInterface : PlayGame {
     fun checkLogic(context: Context): String
@@ -20,6 +21,11 @@ open class GetGameCase : GameInterface {
         playerOne = dataInput
         p1 = playerOne + 1
         playerTwo = (0..2).random()
+//        Rock: 0
+//        Paper: 1
+//        Scissors: 2
+        Log.d("","Player One Input ${playerOne}")
+        Log.d("","Player Two Input ${playerTwo}")
     }
 
     override fun checkLogic(context: Context): String {

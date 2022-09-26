@@ -11,6 +11,10 @@ import com.afiraz.suitgame.case.GetGameCase
 
 class MainActivity : AppCompatActivity() {
 
+    companion object {
+        private val TAG = MainActivity::class.java.simpleName
+    }
+
     private val binding: ActivityMainBinding by lazy {
         ActivityMainBinding.inflate(layoutInflater)
     }
@@ -47,13 +51,16 @@ class MainActivity : AppCompatActivity() {
             ivStoneLeft.setOnClickListener {
                 Log.d(TAG, "initButton: Batu Left Click")
                 useCase.gameOn(0)
+                Log.d(TAG,"Player One Input Stone")
                 playerDisable()
                 ivStoneLeft.setBackgroundColor(Color.parseColor("#ff6666"))
                 setMoodText()
+
             }
             ivScissorLeft.setOnClickListener {
                 Log.d(TAG, "initButton: Gunting Left Click")
                 useCase.gameOn(2)
+                Log.d(TAG,"Player One Input Scissor")
                 playerDisable()
                 ivScissorLeft.setBackgroundColor(Color.parseColor("#ff6666"))
                 setMoodText()
@@ -62,8 +69,9 @@ class MainActivity : AppCompatActivity() {
 
             ivPaperLeft.setOnClickListener {
                 Log.d(TAG, "initButton: Kertas Left Click")
-                playerDisable()
                 useCase.gameOn(1)
+                Log.d(TAG,"Player One Input Paper")
+                playerDisable()
                 ivPaperLeft.setBackgroundColor(Color.parseColor("#ff6666"))
                 setMoodText()
 
@@ -75,9 +83,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    companion object {
-        private val TAG = MainActivity::class.java.simpleName
-    }
+
 
     private fun setMoodText() {
         var splitData = useCase.checkLogic(this).split(",").toTypedArray()
