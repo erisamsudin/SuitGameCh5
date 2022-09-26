@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">SuitGame</string>
+    <string name="text_mood_is_not_good"> %d Your current mood is not good</string>
+    <string name="text_mood_is_good">%d \n Your current mood is Good !</string>
+    <string name="text_mood_is_neutral">%d \n Your current mood is Neutral</string>
+    <string name="tv_vs">VS</string>
+    <string name="tv_player_two">COM</string>
+    <string name="tv_player_one">Player One</string>
+    <string name="title_game">GAME SUIT</string>
+</resources>
