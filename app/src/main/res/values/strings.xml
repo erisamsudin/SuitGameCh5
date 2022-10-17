@@ -7,4 +7,10 @@
     <string name="tv_player_two">COM</string>
     <string name="tv_player_one">Player One</string>
     <string name="title_game">GAME SUIT</string>
+    <string name="title_onboarding_one">Bermain Suit Melawan Sesama Pemain</string>
+    <string name="title_onboarding_two">Bermain Suit Melawan Komputer.</string>
+    <string name="pilih_lawanmu">Pilih Lawanmu</string>
+    <string name="nama_vs_pemain">Nama Vs Pemain</string>
+    <string name="nama_vs_cpu">Nama Vs CPU</string>
+    <string name="input_your_name">Input Your Name</string>
 </resources>

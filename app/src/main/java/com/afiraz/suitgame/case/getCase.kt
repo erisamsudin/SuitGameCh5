@@ -8,7 +8,7 @@ interface GameInterface : PlayGame {
 }
 
 interface PlayGame {
-    fun gameOn(dataInput: Int)
+    fun gameOn(dataInput: Int, multiplePlayer: Boolean, dataInput2: Int)
 }
 
 open class GetGameCase : GameInterface {
@@ -17,15 +17,21 @@ open class GetGameCase : GameInterface {
     var p1 = 0
     var resultGame = ""
 
-    override fun gameOn(dataInput: Int) {
+    override fun gameOn(dataInput: Int, multiplePlayer: Boolean, dataInput2: Int) {
         playerOne = dataInput
         p1 = playerOne + 1
-        playerTwo = (0..2).random()
+
+        if (multiplePlayer) {
+            playerTwo = dataInput2
+        } else {
+            playerTwo = (0..2).random()
+        }
+
 //        Rock: 0
 //        Paper: 1
 //        Scissors: 2
-        Log.d("","Player One Input ${playerOne}")
-        Log.d("","Player Two Input ${playerTwo}")
+        Log.d("", "Player One Input ${playerOne}")
+        Log.d("", "Player Two Input ${playerTwo}")
     }
 
     override fun checkLogic(context: Context): String {
@@ -36,6 +42,6 @@ open class GetGameCase : GameInterface {
         } else {
             resultGame = "Player Win"
         }
-        return "${resultGame},${playerTwo}"
+        return "${resultGame},${playerTwo},${playerOne}"
     }
 }

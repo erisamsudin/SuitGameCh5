@@ -23,7 +23,7 @@
         android:layout_width="match_parent"
         android:layout_height="100dp"
         android:layout_marginTop="30dp"
-        android:src="@drawable/permainan"
+        android:src="@drawable/ic_permainan"
         app:layout_constraintTop_toTopOf="@id/tv_permainan" />
 
     <LinearLayout
@@ -33,11 +33,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:orientation="vertical"
+        android:layout_marginLeft="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/tv_player_one"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:fontFamily="@font/gamesfont"
@@ -88,11 +90,13 @@
         android:layout_marginStart="16dp"
         android:layout_marginBottom="16dp"
         android:orientation="vertical"
+        android:layout_marginRight="25dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
+            android:id="@+id/tv_player_two"
             android:layout_width="match_parent"
             android:layout_height="30dp"
             android:fontFamily="@font/gamesfont"
@@ -129,7 +133,7 @@
         android:fontFamily="@font/gamesfont"
         android:layout_marginTop="10dp"
         android:textColor="#0AFF0E"
-        android:textSize="40sp"
+        android:textSize="20sp"
         android:paddingTop="50dp"
         app:layout_constraintTop_toBottomOf="@id/ll_player_left"
         app:layout_constraintRight_toRightOf="@id/iv_refresh"
